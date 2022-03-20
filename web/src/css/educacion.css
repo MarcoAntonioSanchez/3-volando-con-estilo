@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* <!-- Navbar --> */
+#mainNavbar {
+    height: 125px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    background: #fff;
+    opacity: .9;
+}
+
+.navbar.scrolled {
+    transition: background 500ms ease-in-out;
+}
+
+#nav-logo {
+    color: #3151cf;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.7rem;
+}
+
+.nav-button {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #3151cf;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 25px;
+    box-shadow: 0px 8px 21px 0px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 0px 8px 21px 0px rgba(0,0,0,0.28);
+    transition: .3s ease-in-out;
+}
+
+.nav-button:hover {
+    color: #fff;
+    background: #0998e6;
+    transform: scale(1.1);
+}
+
+#mainNavbar .nav-link {
+    color: #5C677D;
+    transition: .3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#mainNavbar .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #1976D2;
+    transition: .3s;
+}
+
+.active {
+    color: #fff !important;
+    background: #1976D2;
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 10px 40px;
+}
+
+#mainNavbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-collapse {
+    padding: 25px;
+    background-color:#fff;
+    transition: .3s ease-in-out;
+}
+
+/* Portrait */
+
+.portraitImg {
+    width: 100%;
+    height: 50vh;
+    background-image: url('/src/images/education/portrait-educacion-vacuna.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portraitTitle {
+    text-align: center;
+    padding-top: 15%;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.50);
+}
+
+/* Main */
+
+iframe {
+    width: 95vw;
+}
+
+/* <!-- Footer --> */
+
+footer {
+    background: #3151cf23;
+    padding: 25px 50px 0 50px;
+}
+
+.footerList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerListEnd {
+    padding: 0 0 0 150px;
+}
+
+.footerEndLink {
+    text-decoration: none;
+    color: #3151cf;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.footerEndLink:hover {
+    color: #1976D2;
+}
+
+.footerTitle {
+    color: #3151cf;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Media query widescreen */
+@media screen and (max-width: 1400px) {
+
+    /* Navbar */
+    #mainNavbar {
+        font-size: 1rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+        
+    .nav-button {
+        font-size: 1rem;
+    }    
+
+    /* Footer */
+    
+    .footerEndLink {
+        font-size: .8rem;
+        margin: 0 10px;
+    }
+
+    .footerListEnd {
+        padding: 0 0 0 125px;
+    }
+
+}
+
+/* Media query desktop */
+@media screen and (max-width: 992px) {
+
+    /* Portrait */
+
+    .portraitImg {
+        width: 100%;
+        height: 35vh;
+        background-image: url('/src/images/education/portrait-educacion-vacuna.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .portraitTitle {
+        text-align: center;
+        padding-top: 20%;
+        color: #fff;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.50);
+    }
+
+    /* Footer */
+
+    .footerListEnd {
+        padding: 0;
+    }
+
+    .footerEndContainer {
+        text-align: start;
+        width: 100%;
+    }
+
+}
+
+/* Media query tablet */
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+
+    #nav-logo {
+        margin: 0 auto;
+    }
+
+    /* Footer */
+
+    .footerListEnd {
+        padding: 0 0 0 50px;
+    }
+
+}
+
+/* Media query smartphone */
+@media screen and (max-width: 576px) {
+
+    /* Navbar */
+
+    #mainNavbar {
+        height: 100px;
+    }
+
+    .nav-button {
+        margin: auto auto;
+    }
+
+    /* Portrait */
+
+    .portraitTitle {
+        text-align: center;
+        padding-top: 35%;
+        color: #fff;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.50);
+    }
+
+    /* Footer */
+
+    footer {
+        background: #3151cf23;
+        padding: 0;
+    }
+    
+    .footerList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footerListEnd {
+        padding: 0;
+        margin: 25px 75px;
+    }
+    
+    .footerEndLink {
+        text-decoration: none;
+        color: #3151cf;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+    
+    .footerEndLink:hover {
+        color: #1976D2;
+    }
+    
+    .footerTitle {
+        color: #3151cf;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .footerEndContainer {
+        width: 50%;
+    }
+
+    .footerEndContainerFather {
+        padding: 0 0 0 75px;
+    }
+
+}
